@@ -43,12 +43,27 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     expect(Array.isArray(productDetails('água', 'perfume'))).toEqual(true);
     expect(typeof Object.values(productDetails())).toEqual('object');
     const retornar = () => {
-      const valores = productDetails('água', 'alcool');
-      if (valores[0] !== valores[1]) {
-        return 'Diferentes';
+      const valores = productDetails('alcool', 'água');
+    
+      if (Object.values(Object.values(valores[0]))[0] === Object.values(Object.values(valores[1]))[0]) {
+        return 'Iguais';
       }
+        return 'Diferentes';
       };
     expect(retornar()).toEqual('Diferentes');
+    const trazer = () => {
+      const valores = productDetails('água', 'alcool');
+      let recebe1;
+      recebe1 = Object.values(Object.values(Object.values(valores[0])[1])[0]);
+      let recebe2 = Object.values(Object.values(Object.values(valores[1])[1])[0]);
+      let cada1 = recebe1[recebe1.length -3] + recebe1[recebe1.length -2] + recebe1[recebe1.length -1]
+      let cada2 = recebe2[recebe2.length -3] + recebe2[recebe2.length -2] + recebe2[recebe2.length -1]
+      if (cada1 = cada2){
+        return 123;
+      }
+    };
+    expect(trazer()).toEqual(123);
+
 
     
     
