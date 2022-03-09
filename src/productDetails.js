@@ -38,5 +38,11 @@ const productDetails = (firstProduct, secondProduct) => [
     },
   },
 ];
+/* const retornar = () => {
+const valores = productDetails('água', 'alcool');
+if (valores[0] !== valores[1]) {
+  return 'Diferentes';
+}
+}; */
 
 module.exports = productDetails;
