@@ -39,13 +39,13 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
-const retornar = () => {
+/* const retornar = () => {
   const valores = productDetails('água', 'água');
   let recebe;
   recebe = Object.values(Object.values(Object.values(valores[0])[1])[0]);
   let cada = recebe[recebe.length -3] + recebe[recebe.length -2] + recebe[recebe.length -1]
   return cada;
-};
-console.log(retornar());
+}; */
+/* console.log(retornar()); */
 
 module.exports = productDetails;
