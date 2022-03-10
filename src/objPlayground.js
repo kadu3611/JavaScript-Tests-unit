@@ -44,8 +44,8 @@ const calculator = (number1, number2) => {
 
    /* console.log(calculator(5, 2)); */
 
-const arrayGenerator = (_type, _object) => {
-  if (_type === 'keys') {
+const arrayGenerator = (type, object) => Object[type](object);
+  /* if (_type === 'keys') {
     const objeto = Object.keys(_object);
     return objeto;
   }
@@ -56,7 +56,7 @@ const arrayGenerator = (_type, _object) => {
   if (_type === 'entries') {
     const objetoE = Object.entries(_object);
     return objetoE;
-  }
-};
+  } */
 /* console.log(arrayGenerator('values', calculator(1, 2))); */
+
 module.exports = { calculator, arrayGenerator };
